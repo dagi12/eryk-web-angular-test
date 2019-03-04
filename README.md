@@ -6,7 +6,7 @@ This repository should be added with
 - eryk-web-angular-common
 - flota-web-angular-commnon
 
-## TODO
+## t'odos
 - remove `-sm=false` on newest Angular 6
 - use shallow tests
 

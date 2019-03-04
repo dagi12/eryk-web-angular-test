@@ -12,6 +12,7 @@ import {Modal} from 'ngx-modialog';
 import {AttachmentService} from '../app/flota-web-angular-common/src/component/attachment/attachment.service';
 import {ErykConfig} from '../app/eryk-web-angular-common/src/eryk.interface';
 import {IPostUser} from '../app/flota-web-angular-common/src/service/user/i-post-user';
+import {CrudTableApi} from '../app/eryk-web-angular-common/src/component/table/crud-table/crud-table-api';
 
 const user = {
   userId: 0,
@@ -52,10 +53,12 @@ export const myTitleServiceStub: Partial<MyTitleService> = {
 export const commonModalServiceStub: Partial<CommonModalService> = {};
 
 export const crudTableServiceStub: Partial<CrudTableService> = {
-  lazy: () => {
-    return Observable.of([{
-      'dupa': 'dupa'
-    }]);
+  buildApi: () => {
+    const crudTableApi = new CrudTableApi(null, null);
+    crudTableApi.lazy = () => {
+      return Observable.of([]);
+    };
+    return crudTableApi;
   }
 };
 
