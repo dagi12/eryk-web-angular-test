@@ -9,3 +9,21 @@ This repository should be added with
 ## TODO
 - remove `-sm=false` on newest Angular 6
 - use shallow tests
+
+## Service testing
+
+```TypeScript
+  ApiConfigService,
+  BaseRequestOptions,
+  MockBackend,
+  {
+    deps: [
+      MockBackend,
+      BaseRequestOptions
+    ],
+    provide: AuthHttp,
+    useFactory: (mockedBackend: XHRBackend, defaultOptions: BaseRequestOptions) => {
+      return new Http(mockedBackend, defaultOptions);
+    },
+  }
+```

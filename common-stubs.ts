@@ -10,8 +10,8 @@ import {FlotaConfig} from '../app/flota-web-angular-common/src/flota-config.inte
 import {ApiConfigService} from '../app/eryk-web-angular-common/src/service/api-config.service';
 import {Modal} from 'ngx-modialog';
 import {AttachmentService} from '../app/flota-web-angular-common/src/component/attachment/attachment.service';
-import {PostUserService} from '../app/domain-login/post-user.service';
 import {ErykConfig} from '../app/eryk-web-angular-common/src/eryk.interface';
+import {IPostUser} from '../app/flota-web-angular-common/src/service/user/i-post-user';
 
 const user = {
   userId: 0,
@@ -73,7 +73,7 @@ export const modalStub: Partial<Modal> = {};
 
 export const attachmentServiceStub: Partial<AttachmentService> = {};
 
-export const postUserServiceStub: Partial<PostUserService> = {};
+export const postUserServiceStub: Partial<IPostUser> = {};
 
 export const erykConfigStub: ErykConfig = {
   oauthApiUrl: '',
