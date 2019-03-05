@@ -58,6 +58,9 @@ export const crudTableServiceStub: Partial<CrudTableService> = {
     crudTableApi.lazy = () => {
       return Observable.of([]);
     };
+    crudTableApi.all = () => {
+      return Observable.of([]);
+    };
     return crudTableApi;
   }
 };
