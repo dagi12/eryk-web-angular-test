@@ -8,11 +8,12 @@ import {CrudTableService} from '../app/eryk-web-angular-common/src/component/tab
 import {MyToastService} from '../app/eryk-web-angular-common/src/service/my-toast.service';
 import {FlotaConfig} from '../app/flota-web-angular-common/src/flota-config.interface';
 import {ApiConfigService} from '../app/eryk-web-angular-common/src/service/api-config.service';
-import {Modal} from 'ngx-modialog';
+import {DialogRef, Modal} from 'ngx-modialog';
 import {AttachmentService} from '../app/flota-web-angular-common/src/component/attachment/attachment.service';
 import {ErykConfig} from '../app/eryk-web-angular-common/src/eryk.interface';
 import {IPostUser} from '../app/flota-web-angular-common/src/service/user/i-post-user';
 import {CrudTableApi} from '../app/eryk-web-angular-common/src/component/table/crud-table/crud-table-api';
+import {EmptyModalData} from '../app/eryk-web-angular-common/src/component/modal/empty-modal/empty-modal.component';
 
 const user = {
   userId: 0,
@@ -84,4 +85,8 @@ export const postUserServiceStub: Partial<IPostUser> = {};
 export const erykConfigStub: ErykConfig = {
   oauthApiUrl: '',
   baseUrl: ''
+};
+
+export const dialogStub: Partial<DialogRef<EmptyModalData>> = {
+  context: new EmptyModalData({}, '')
 };
