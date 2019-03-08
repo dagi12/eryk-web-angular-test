@@ -14,6 +14,7 @@ import {ErykConfig} from '../app/eryk-web-angular-common/src/eryk.interface';
 import {IPostUser} from '../app/flota-web-angular-common/src/service/user/i-post-user';
 import {CrudTableApi} from '../app/eryk-web-angular-common/src/component/table/crud-table/crud-table-api';
 import {EmptyModalData} from '../app/eryk-web-angular-common/src/component/modal/empty-modal/empty-modal.component';
+import 'rxjs/add/observable/of';
 
 const user = {
   userId: 0,
